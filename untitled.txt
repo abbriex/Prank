@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crush Mo Ba Ako?!</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      background-color: #ffe6f0;
+      margin-top: 50px;
+    }
+    h1 {
+      font-size: 36px;
+      color: #ff3399;
+    }
+    img {
+      width: 250px;
+      margin: 20px auto;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .btn {
+      padding: 15px 30px;
+      margin: 20px;
+      font-size: 20px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .yes {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .no {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+    .maybe {
+      background-color: #ff9800;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Crush mo ba ako?! Boyyy!?</h1>
+  <img src="https://i.imgur.com/8RKXAIV.gif" alt="Cute Reaction" />
+
+  <div>
+    <button class="btn yes" onclick="yesClicked()">Yes</button>
+    <button class="btn no" id="noBtn">No</button>
+    <button class="btn maybe" id="maybeBtn">Maybe</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    const maybeBtn = document.getElementById("maybeBtn");
+
+    function moveButton(button) {
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 100));
+      button.style.left = x + "px";
+      button.style.top = y + "px";
+    }
+
+    noBtn.addEventListener("mouseover", () => moveButton(noBtn));
+    maybeBtn.addEventListener("mouseover", () => moveButton(maybeBtn));
+
+    function yesClicked() {
+      alert("Ayyyieee! 💖 Kinilig ako hehe 😍");
+    }
+  </script>
+
+</body>
+</html>
